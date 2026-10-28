@@ -1,4 +1,10 @@
 .env
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.env.local
+.wrangler/
+node_modules/
 data/
 __pycache__/
 *.pyc

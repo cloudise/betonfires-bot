@@ -1,0 +1,2 @@
+# Required secret in your own Cloudflare account; leave no real token in GitHub.
+TELEGRAM_BOT_TOKEN=

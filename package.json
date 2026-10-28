@@ -1,0 +1,22 @@
+{
+  "name": "betonfires-free-bot",
+  "private": true,
+  "version": "0.4.0",
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "build": "node --test worker/test/*.test.js",
+    "test": "node --test worker/test/*.test.js",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": { "wrangler": "^4.45.0" },
+  "cloudflare": {
+    "bindings": {
+      "TELEGRAM_BOT_TOKEN": {
+        "description": "Токен @BETONFIRES_BOT из официального BotFather. Вводится как секрет только в вашем аккаунте Cloudflare; в GitHub и ChatGPT его не отправляют."
+      },
+      "DB": { "description": "База D1 для владельца, расписания и виртуального журнала. Используйте Workers Free и D1 Free." }
+    }
+  }
+}

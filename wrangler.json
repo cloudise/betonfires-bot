@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "betonfires-bot",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-29",
+  "workers_dev": true,
+  "vars": { "EXPECTED_BOT_USERNAME": "BETONFIRES_BOT" },
+  "d1_databases": [{ "binding": "DB", "database_name": "betonfires-data" }],
+  "triggers": { "crons": ["* * * * *"] },
+  "observability": { "enabled": false }
+}
